@@ -1,0 +1,6 @@
+<td>
+  <%= link_to 'Delete-image',"#{delete_image(gallery_list,image_list)}" , method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%=image_tag(image_list.image.url)%>
+  <%= link_to 'comment on images', "#{delete_image(gallery_list,image_list)}"  %>
+</td>
+  

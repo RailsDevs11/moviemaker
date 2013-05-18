@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Credit Type:</b>
+  <%= @credit.credit_type_list %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @credit.title %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @credit.year %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @credit.role %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @credit.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_credit_path(@credit) %> |
+<%= link_to 'Back', credits_path %>

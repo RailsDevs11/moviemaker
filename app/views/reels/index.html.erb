@@ -1,0 +1,10 @@
+<%= render 'reels/form' %>
+
+<%= form_for current_user, :url => "#{update_videos}", :html => { :method => :put, :multipart => true } do |f| %>
+  <%= render  :partial=> "reels/reel_list", :locals => {:f => f } %>
+  <%= f.submit "Save Changes" %>
+<% end %>
+
+
+
+

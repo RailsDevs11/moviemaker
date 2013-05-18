@@ -1,0 +1,12 @@
+<%= render :partial => "new" %>
+
+<%= form_for @cini, :url => {:controller => 'roles', :action => 'set_admin', :id => params[:cini_id] }, :html => { :method => :get, :multipart => true } do |f| %>
+  <%= render  :partial=> "role_list", :locals => {:f => f } %>
+<% end %>
+
+<%= form_for @cini, :url => {:controller => 'roles', :action => 'set_admin', :id => params[:cini_id] }, :html => { :method => :get, :multipart => true } do |f| %>
+  <%= render  :partial=> "accepted_cini_role", :locals => {:f => f } %>
+  <%= f.submit "Save Changes" %>
+<% end %>
+
+<%#= render  :partial=> "pending_cini_role" %>

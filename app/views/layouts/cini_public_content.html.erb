@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="en"><![endif]-->
+<!--[if !IE]>--><html lang="en"><!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <title>Cini public page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--styles-->
+  <%= stylesheet_link_tag "bootstrap", "chosen", "main", "animation" %>
+</head>
+<body>
+  <div class="pageWrap">
+    <%= render :partial => '/layouts/top_menu'%>
+    <% flash.each do |key, msg| %>
+      <%= content_tag :div, msg, :id => key %>
+    <% end %>
+
+    <div class="ciniPageWrap">
+      <%= render :partial => '/layouts/cini_public_follower'%>
+      <div class="ciniPageContent">
+        <div class="cpSidebar">
+          <%= render :partial => '/layouts/cini_public_detail'%>
+        </div><!--cpSidebar-->
+        <div class="cpRight">
+          <%= render :partial => '/layouts/cini_public_menu'%>
+        </div><!--cpRight-->
+      </div><!--ciniPageContent-->
+      <%= yield %>
+    </div><!--ciniPageWrap-->
+  </div><!--pageWrap-->
+
+  <%= render :partial => 'layouts/footer' %>
+
+<!--javascript
+==================================================--> 
+<%= javascript_include_tag "application" %>
+<script src="/assets/chosen.jquery.min.js"></script> 
+<script src="/assets/jquery.jcarousel.min.js"></script>
+
+<script>
+function mycarousel_initCallback2(carousel) {
+    carousel.buttonNext.bind('click', function () {
+        carousel.startAuto(0);
+    });
+    carousel.buttonPrev.bind('click', function () {
+        carousel.startAuto(0);
+    });
+    carousel.clip.hover(function () {
+        carousel.stopAuto();
+    }, function () {
+        carousel.startAuto();
+    });
+};
+</script>
+<script>
+$(document).ready(function(e) {
+    $.getJSON('/assets/auto.json', function(data) { 
+         $('#autosuggest').typeahead({
+            source:data,
+            items: 10
+        });
+    }); 
+  
+   $('#movie_carousel').jcarousel({
+        scroll: 1,
+        auto: 1,
+        wrap: 'last',
+        animation: 'slow',
+        initCallback: mycarousel_initCallback2
+    });
+   
+});
+</script>
+<script type="text/javascript">
+// Invoke the carousel inside this Modal
+  $(document).ready(function(e) {
+     $('#carousel_1').carousel(); 
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<%= form_for :user_update,:url =>user_update_status_path("form_id")  do |f| %>
+  <div class="avatar">
+    <a href="#"><%= image_tag(current_user.user_small_image)%></a>
+  </div>
+  <div class="contentBox">
+    <%= f.text_area :status, :size => "50x2" , :value => current_user.get_top_status %>
+    <div style="text-align:right;">
+      <button type="submit" class="btn uppercase"><i class="icon-grid"></i> POST</button>
+    </div>
+  </div>
+<% end %>
+
+
+

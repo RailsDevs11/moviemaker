@@ -1,0 +1,6 @@
+<table><tr>
+<td><h4><%= @cini.title %></h4></td>
+<td><%=link_to 'Publish', '#' %> |</td>
+<td><%=link_to 'Hide-cini', '#' %> |</td>
+<td><%= link_to 'Delete-Cini', user_cini_path(@cini), method: :delete, data: { confirm: 'Are you sure?' } %> </td></tr></table>
+  

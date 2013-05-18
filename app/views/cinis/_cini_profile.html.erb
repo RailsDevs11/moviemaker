@@ -1,0 +1,68 @@
+            <div class="detailRow1 clearfix">
+              <%= form_for @cini,:url => user_cini_path, :html => { :multipart => true }  do |f| %>
+                <div class="detailMoviePoster">
+                  
+                  <%= image_tag(@cini.cini_detail_page_image, :id => "blah") %>
+                  <a href="#">One Sheet Guidlines</a>
+                  <a class="btn uppercase fileinput-button_signup" style="color: #333333;"><i class="icon-grid"></i>
+                  <%= fields_for @image do |img| %>
+                    <%= img.file_field :image %>
+                    <%= img.hidden_field :image_cache %>
+                  <% end %>&nbspUpload</a>
+                </div>
+                <div class="detailRight">
+                  <label for="title">Title</label>
+                  <%= f.text_field :title, :placeholder => "Perfume" %>
+                  <div class="locationCity">
+                    <label for="location_city">Location By City</label>
+                    <select id="location_city" name="location_city">
+                      <option value="Los Angeles">Los Angeles</option>
+                      <option value="">One</option>
+                      <option value="">Two</option>
+                    </select>
+                  </div>
+                  <label for="log_line">Log Line</label>
+                  <%= f.text_area :log_line, :placeholder => "The Story of a Murderer" %>
+                </div>
+            </div>
+
+              <div class="detailRow2 clearfix">
+                <label for="synopsis">Synopsis</label>
+                <%= f.text_area :synopsis, :placeholder => "A Movie about a guy, who does stuff, in a time where doing stuff is challenging." %>
+                <div class="control-group styleSelect">
+                  <label for="genre">Genre</label>
+                  <select id="choose_genre" name="genre">
+                    <option value="">Choose One</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                <div class="control-group styleSelect">
+                  <label for="project_status">Project Status</label>
+                  <select id="project_status" name="project_status">
+                    <option value="">Choose One</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                <div class="control-group styleSelect">
+                  <label for="project_type">Project Type</label>
+                  <select id="project_type" name="project_type">
+                    <option value="">Choose One</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                <div class="control-group styleSelect">
+                  <label for="script_status">Script Status</label>
+                  <select id="script_status" name="script_status">
+                    <option value="">Choose One</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+              </div>
+              <div class="saveBox">
+                <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+              </div>
+           <% end %>

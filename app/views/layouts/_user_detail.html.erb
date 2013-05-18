@@ -1,0 +1,37 @@
+<div class="posterBox">
+    <a href="#"><%= image_tag(@user.user_public_profile_image) %></a>
+</div><!--posterBox-->
+<div class="cpSidebarIn boxshadow">
+	<div class="netwwork">
+    	<h4>Networks</h4>
+        <ul class="netwworkLink clearfix">
+        	<li><a class="youtube" href="#" title="Youtube">Youtube</a></li>
+            <li><a class="facebook" href="#" title="Facebook">Facebook</a></li>
+            <li><a class="twitter" href="#" title="Twitter">Twitter</a></li>
+            <li><a class="linkedIn" href="#" title="LinkedIn">LinkedIn</a></li>
+            <li><a class="tumblr" href="#" title="Tumblr">Tumblr</a></li>
+        </ul>
+    </div>
+    <div class="about">
+    	<h4>About</h4>
+        <p><%#= @user.about %></p>
+        <p id='showLess'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi zzril delenit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet....</p>
+        <p><a href="javascript:void(0);" class="readMore">Read More &gt;</a></p>
+        <p id='showMore' style='display: none;'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi zzril delenit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet.</p>
+        <p><a href="javascript:void(0);" class="readLess" style='display: none;'>Read Less &gt;</a></p>
+    </div>
+    <div class="tumbsBox clearfix">
+    	<h4>Recommendations</h4>
+        <ul class="recomendation">
+            <%= render :partial => 'layouts/user_recommendations' %>
+        </ul>
+        <p><a href="#" class="viewAll">View All &gt;</a></p>
+    </div>
+    <div class="tumbsBox clearfix">
+    	<h4>Followers</h4>
+        <ul class="thumbs1">
+            <%= render :partial => 'layouts/user_followers' %>
+        </ul>
+        <p><a href="#" class="viewAll">View All &gt;</a></p>
+    </div>
+</div><!--cpSidebarIn-->

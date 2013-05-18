@@ -1,0 +1,35 @@
+<div class="movieBox boxshadow">
+  <%= render :partial => "cini_public_videos/main_video"%>
+</div>
+
+<div class="cpTabContent boxshadow">
+  <ul class="cpTabNav clearfix">
+    <li class="active"><a data-toggle="tab" href="#Videos_tab_con">Videos</a></li>
+    <li class=""><a data-toggle="tab" href="#Galleries_tab_con">GALLERIES</a></li>
+    <li class=""><a data-toggle="tab" href="#Crew_tab_con">CREW</a></li>
+    <li class=""><a data-toggle="tab" href="#Updates_tab_con">Updates</a></li>	
+    <li class=""><a data-toggle="tab" href="#Needs_tab_con">Needs</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Videos_tab_con" class="tab-pane fade active in">
+      <%= render :partial => "cini_public_videos/public_videos" %>
+    </div><!--#Videos_tab_con-->
+    <div id="Galleries_tab_con" class="tab-pane fade">
+      <%= render :partial => "cini_public_galleries/public_galleries" %>
+    </div><!--#Galleries_tab_con-->
+    <div id="Crew_tab_con" class="tab-pane fade">
+      <%= render :partial => "cini_public_roles/public_roles" %>
+    </div><!--#Crew_tab_con-->
+    <div id="Updates_tab_con" class="tab-pane fade">
+      <%= render :partial => "cini_public_updates/public_updates" %>
+    </div><!--#Updates_tab_con-->
+    <div id="Needs_tab_con" class="tab-pane fade">
+      <%= render :partial => "cini_public_needs/public_needs" %>
+    </div><!--#Needs_tab_con-->
+  </div><!--tab-content-->
+</div><!--cpTabContent-->
+
+<div class="modal hide fade" id="comment_overlay1">
+  <%= render :partial => "cini_public_videos/public_comment_popup"%>
+</div><!--modal End-->

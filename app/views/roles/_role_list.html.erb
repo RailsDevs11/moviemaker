@@ -1,0 +1,7 @@
+<table>
+  <%= f.fields_for :roles, @cini.roles do |form| %>
+  <% if form.object.persisted? and form.object.is_unfill? %>
+    <%= render :partial => "role_data", :locals => {:form => form} %>  
+  <% end %>
+  <% end %>
+</table>

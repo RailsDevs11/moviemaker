@@ -1,0 +1,6 @@
+$('#Updates_tab_con ul.updatesElem').append('<%=escape_javascript render :partial => "cini_public_updates/update", :collection => @updates %>');
+<% unless @updates.next_page.blank? %>
+  $('.show_more_link_updates').html('<%=escape_javascript render :partial => "cinis/show_more_feeds" %>');
+<% else %>
+  $('.show_more_link_updates').remove();
+<% end %>

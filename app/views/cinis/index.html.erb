@@ -1,0 +1,10 @@
+<h1>Listing cinis</h1>
+<table>
+  <%= render :partial => "cini_list", :collection => current_user.get_managable_cinis %>
+</table>
+<br />
+
+<h4>Followed cinis</h4>
+<%current_user.cini_followings.each do |cini| %>
+  <%=cini.title%><br/> 
+<%end%>

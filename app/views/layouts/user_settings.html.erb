@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="en" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="en"><![endif]-->
+<!--[if !IE]>--><html lang="en"><!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>Home Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!--styles-->
+
+		<%= stylesheet_link_tag    "bootstrap" %>
+		<%= stylesheet_link_tag    "main" %>
+<%= stylesheet_link_tag    "chosen" %>
+<%= stylesheet_link_tag    "animation", "signup" %>
+<%= csrf_meta_tags %>
+
+</head>
+<body>
+
+
+<div class="pageWrap">
+  <%= render :partial => '/layouts/top_menu'%>
+  <%= render :partial => '/layouts/message_wrap' %>
+  <div class="mainContainer">
+    <%= render :partial => '/layouts/user_setting_menu'%>
+    <div class="contentWrap clearfix">
+      <%= yield %>
+    </div><!--contentWrap-->
+  </div>
+</div>
+<!--pageWrap-->
+
+<%= render :partial => 'layouts/footer' %>
+
+<!--javascript
+==================================================--> 
+<%= javascript_include_tag "application" %>
+<script src="/assets/chosen.jquery.min.js"></script>
+
+
+<script>
+$(document).ready(function(e) {
+    $.getJSON('/assets/auto.json', function(data) { 
+         $('#autosuggest').typeahead({
+            source:data,
+            items: 10
+        });
+    });    
+
+     $('#image_image').live("change",function(){
+     if (this.files && this.files[0]) {
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          $('#blah').attr('src', e.target.result);
+          $('.uploadedImageBox img').css({'width' : '136px' , 'height' : '200px'});
+        }
+        reader.readAsDataURL(this.files[0]);
+      }
+    });
+
+
+ 
+
+
+});
+</script>
+</body>
+</html>

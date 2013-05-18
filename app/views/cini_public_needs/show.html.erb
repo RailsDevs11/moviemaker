@@ -1,0 +1,14 @@
+<table>
+  <tr>  
+    <td><%= @need.show_needs %></td>
+  </tr>
+  <% @need.images.each do |image| %>
+    <% next if image.image.blank? %>
+    <tr>  
+      <td><%= image_tag(image.image.url) %></td>
+    </tr>
+  <% end %>
+  <tr>  
+    <td><button>MESSAGE</button></td>
+  </tr>
+</table>

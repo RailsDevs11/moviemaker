@@ -1,0 +1,15 @@
+<tr>
+  <td><%= @reel.title %></td>
+  <td><%= image_tag(@reel.video_url) unless @reel.video.blank? %></td>
+</tr>
+
+<%= form_for :comment, :url => require_create_path(@reel.id), :id=>"form_id", :remote => true do |f| %>
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+  <%= f.submit 'Comment' %>
+<%end%>
+
+COMMENTS :
+<div id="comments">
+  <%= render  @comments %>
+</div>

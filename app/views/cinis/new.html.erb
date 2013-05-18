@@ -1,0 +1,6 @@
+<h1>New cini</h1>
+<%= form_for @cini,:url => url_for(:controller => 'cinis', :action => 'create'), :html => { :multipart => true }  do |f| %>
+  <%= render :partial => "form",:locals =>{:f => f }  %>
+<%end%>
+
+<%= link_to 'Back', user_cinis_path %>

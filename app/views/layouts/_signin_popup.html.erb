@@ -1,0 +1,11 @@
+<a href="#login_popUp" class="btn uppercase" data-toggle="modal"><i class="icon-key"></i> LOG IN</a>
+<div style="text-align:left;" id="login_popUp" class="modal hide fade">
+  <div class="modal-body">
+    <h4>Log In</h4>
+    <%= render :partial => 'devise/sessions/login'%> 
+    <div class="notmember">
+      <h4> Not A Member?</h4>
+      <a class="btn btnBrown darkText" href="<%= new_user_registration_path %>">SIGN UP</a>
+    </div>
+  </div>
+</div><!--modal End-->

@@ -1,0 +1,9 @@
+<li>
+  <div class="avatar">
+    <%= image_tag(feed.updateable.user_feed_image)%>
+  </div>
+  <div class="contentBox">
+    <h4 class="title"><%= get_capitalize(feed.updateable.first_name) %> <%= get_capitalize(feed.updateable.last_name) %></h4>
+    <p><%= feed.alert.html_safe %></p>
+  </div>
+</li>

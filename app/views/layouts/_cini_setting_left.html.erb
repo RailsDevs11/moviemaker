@@ -1,0 +1,12 @@
+<div class="adminLeftContent">
+  <div class="ciniStatus"><h2>Cini Status</h2></div>
+  <div class="publishCini">
+    <%= link_to content_tag('i class="icon-publish"></i', " PUBLISH CINI"), change_cini_status_user_cini_path(@cini, :is => 1), :class => "btn btnBrown uppercase" %>
+  </div>
+  <div class="deleteCini">
+    <%= link_to content_tag('i class="icon-off"></i', " HIDE CINI"), change_cini_status_user_cini_path(@cini, :is => 0), :class => "btn" %>
+    <%= link_to content_tag('i class="icon-trash"></i', " DELETE CINI"), user_cini_path(@cini), :method=> :delete, data: { confirm: 'Are you sure?' }, :class => "destroy btn" %>
+
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="updateTabOuter">
+  <div class="updateTabConIn">
+    <ul class="updatesElem">
+      <%= render :partial => "cini_public_updates/update", :collection => @updates %>
+    </ul>
+  </div><!--<div id="bottomBorder"><a id="bottomClick" href="#"></a></div>-->
+
+  <% unless @updates.total_pages < 2 %>
+    <div id="bottomBorder" class="show_more_link_updates">
+      <%= link_to '', more_feeds_cinis_path(  :updates => @updates.next_page, :id => @cini.id), :remote => true, :id => "bottomClick"%>
+    </div>
+  <% end %>
+</div><!--updateTabConIn-->

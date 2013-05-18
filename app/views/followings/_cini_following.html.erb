@@ -1,0 +1,5 @@
+<%@cinis.each do |cini| %>
+  <%=cini.title%> | 
+  <%=link_to 'Unfollow-cini',unfollow_cini_user_following_path(cini.id),:remote => true %><br />
+<%end%>
+

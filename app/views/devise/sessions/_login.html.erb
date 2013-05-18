@@ -1,0 +1,11 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), html: { method: :post, :name => "loginForm", :id => "user_sign_up", :class => "loginForm" }) do |f| %>
+  <div class="control-group">
+  	<%= f.email_field :email, :placeholder => "Username or Email" %>
+  </div>
+  <div class="control-group">
+    <%= f.password_field :password, :placeholder => "Password" %>
+  </div>
+   <div style="text-align:right; padding-right:10px;" class="control-group">
+      <button class="btn uppercase" type="submit"><i class="icon-grid"></i> LOG IN</button>
+  </div>
+<% end %>

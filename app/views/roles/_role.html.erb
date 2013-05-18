@@ -1,0 +1,7 @@
+<tr>
+  <td><%= role.character %></td>
+  <td><%= role.description %></td>
+  <td>&nbsp;</td>
+  <td><%= link_to 'Edit', edit_user_cini_role_path(params[:cini_id], role) %></td>
+  <td><%= link_to 'Delete', user_cini_role_path(params[:cini_id], role), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

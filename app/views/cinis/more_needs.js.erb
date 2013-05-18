@@ -1,0 +1,12 @@
+$('#Needs_tab_con ul.needConRow').append('<%=escape_javascript render :partial => "homes/need", :collection => @needs %>');
+<% unless @needs.next_page.blank? %>
+  $('.show_more_link_needs').html('<%=escape_javascript render :partial => "cinis/show_more_needs" %>');
+<% else %>
+  $('.show_more_link_needs').remove();
+<% end %>
+$('.needConRow li:even').css({
+	'background-color': '#ffffff'
+});
+$('.needConRow li:odd').css({
+	'background-color': '#e4e3dc'
+});

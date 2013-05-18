@@ -1,0 +1,9 @@
+<div class="messageWrap hide">
+  <div class="in brown">
+      <p><span>Orange Messages are Cinimail </span>   Want to learn more?</p>
+  </div>
+</div>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true }) do |f| %>
+ <%= render :partial => 'homes/root_signUp', :locals => { :f => f } %>
+<% end %>

@@ -1,0 +1,20 @@
+
+  <% cred_with_tagged = @total_credits.tagged_with(credit_tag) %>
+  <h4><%= credit_tag unless cred_with_tagged.empty? %></h4>
+  
+  <% index =  0%>
+  <%= f.fields_for :credits do |credit_form| %>
+    <% credit_data = current_user.credits[index] %>
+    <% if cred_with_tagged.include?(credit_data)%>
+      <div class="dataWrap"> 
+        <%= render :partial => "credits/credit_data", :locals => {:credit_data => credit_data, :credit_form => credit_form} %>      
+      </div><!--dataWrap-->
+    <% end %>
+    <% index += 1 %>
+  <% end %>
+
+
+                        
+                          
+
+                        

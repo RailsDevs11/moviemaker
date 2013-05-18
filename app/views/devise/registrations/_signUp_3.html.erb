@@ -1,0 +1,36 @@
+<div class="signupContent" id="step_3">
+  <div class="inner2">
+  
+    <div class="signupBreadcrumbs bg2">
+      <ul class="breadcrumb1">
+        <li class="inactive step signup1" div-id="1"><a href="javascript:void(0);" >1. SIGN UP</a></li>
+        <li class="inactive step" div-id="2"><a href="javascript:void(0);">2. STYLE</a></li>
+        <li class="active step" div-id="3"><a href="javascript:void(0);">3. PHOTO</a></li>
+        <li class="last-child"><a href="javascript:void(0);">4. DETAILS</a></li>
+      </ul>
+    </div>              
+  
+    <h3>Add a Portfolio Image.</h3>
+    <div class="accountImageUpload clearfix">
+      <div class="uploadedImageBox">
+         <img id='blah' src="/assets/uploaded-image.png" alt="">
+         <p>Image should be atleast 500px wide</p>
+      </div>
+      <div class="accountUploadbox">
+        <a href="javascript:void(0);" class="btn uppercase fileinput-button_signup"><i class="icon-grid"></i>
+        <%= fields_for @image do |img| %>
+          <%= img.file_field :image %>
+          <%= img.hidden_field :image_cache %>
+        <% end %>  
+        &nbspUPLOAD</a>
+        <span>portfolio image</span>
+      </div>
+    </div>
+  
+    <div style="text-align:right;">
+      <a href="javascript:void(0);" class="btn uppercase2 step skip_step3" div-id="4">SKIP</a>
+      <a href="javascript:void(0);" class="btn uppercase2 step" div-id="4">NEXT</a>
+    </div>
+        
+  </div><!--inner2-->
+</div>

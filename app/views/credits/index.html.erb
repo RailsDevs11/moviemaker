@@ -1,0 +1,9 @@
+<h2>New Credit</h2>
+<%= render 'form' %>
+<%= form_for current_user, :url => user_credit_path(current_user), :html => {:method => :put} do |f| %>
+  <%= render  :partial=> "credit_tag", :collection => @credit_types, :locals => {:f => f} %>
+<%= f.submit "Save Changes" %>
+<% end %>
+
+
+

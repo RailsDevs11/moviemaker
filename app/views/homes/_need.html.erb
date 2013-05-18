@@ -1,0 +1,11 @@
+<li>
+  <div class="needAvatar">
+    <% cini_record = need.cini %>
+    <%= image_tag(cini_record.cini_small_image)%>
+  </div>
+  <div class="textBox">
+    <h4 class="title"><%= get_capitalize(cini_record.title) %></h4>
+    <p>Needs a <span><%= need_detail(need) %></span></p>	
+  </div>
+</li>
+

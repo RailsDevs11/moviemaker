@@ -1,0 +1,30 @@
+                            <%= form_for @credit, :url => user_credits_path, :html => {:method => :post} do |f| %>
+                             
+                            <div class="innerRow clearfix">
+                            	<div class="boxCreditType">
+                                	<label for="credittype">Credit Type</label>
+                                  <%= select_tag "credit_type", options_for_select(@credit_types, :selected=>@credit.credit_type_list) %>
+                                </div>
+                                <div class="boxYear">
+                                	<label for="year">Year</label>
+                                    <%= f.select :year, Credit::YEARS %>
+                                </div>
+                                <div class="boxtitle">
+                                	<label for="title">TITLE</label>
+                                   <%= f.text_field :title %><%= @credit.errors["title"][0] %>
+                                </div>
+                            </div><!--innerRow-->
+                            <div class="innerRow clearfix">
+                            	<div class="boxrole">
+                                	<label for="role">Role</label>
+                                    <%= f.text_field :role %>
+                                </div>
+                                <div class="boxIMDB">
+                                	<label for="linkimdb">Link to IMDB</label>
+                                    <%= f.text_field :link %>
+                                </div>
+                            </div><!--innerRow-->
+                            <div class="innerRow" style="text-align:right;">
+                            <button type="submit" class="btn uppercase"><i class="icon-grid"></i> ADD</button>
+                            </div><!--innerRow-->
+                            <% end %>

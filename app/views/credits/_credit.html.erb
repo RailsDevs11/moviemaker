@@ -1,0 +1,11 @@
+<tr>
+  <td><%= credit.year %></td>
+  <td><%= credit.title %></td>
+  <td><%= link_to credit.link %></td>
+  <td><%= credit.role %></td>
+  <td><%= link_to 'Edit', "javascript:void(0)",:id=>credit.id, :class => "edit_credit" %></td>
+  <td><%= link_to 'Destroy', credit, confirm: 'Are you sure?', method: :delete %></td>
+</tr>
+
+
+

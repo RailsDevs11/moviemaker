@@ -1,0 +1,12 @@
+<h1>Listing connections</h1>
+ 
+<h3>Friends List </h3>
+<%=render :partial => "user_list", :collection => @friends , :locals => {:info => ""}%>
+<h3>Followers List </h3>
+<%=render :partial => "user_list", :collection => @followers , :locals => {:info => ""}%>
+<h3>Pending List</h3>
+<%=render :partial => "user_list", :collection => @pendings , :locals => {:info => ""}%>
+<h3>Requester List </h3>
+<%=render :partial => "user_list", :collection => @requester , :locals => {:info => "options"}%>
+
+

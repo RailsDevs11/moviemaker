@@ -1,0 +1,10 @@
+<h4> Pending records </h4>
+<table>
+  <% @cini.cini_roles.pending_records.each do |record| %>
+   <tr>
+    <td><%= record.user.first_name %></td>
+    <td><%= record.role.character %></td>
+    <td><%= link_to "Accept Role Request", accept_role_request_user_cini_role_path(@cini.id, record.role.id, :user_id => record.user.id), :method => :post %></td>
+   </tr>
+  <% end %>
+</table>

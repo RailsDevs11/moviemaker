@@ -1,0 +1,9 @@
+<h2>This is account Page</h2>
+<!-- id = account_type is required for ajax -->
+<div id="account_type">
+  <% if current_user.is_creative? %>
+    Account Type: <%= current_user.account_type.name.capitalize %>
+  <% else %>
+    Change Account Type to Creative: <%= link_to current_user.account_type.name.capitalize,       change_to_creative_user_account_index_path, :method => :post, :remote => true %>
+  <% end %>
+</div>

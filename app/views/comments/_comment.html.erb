@@ -1,0 +1,6 @@
+<%= link_to comment.ownerable.first_name %>
+<%= comment.comment %>
+<%= comment.created_at.strftime("%B %d, %Y") %>
+<%if comment.commentable_type == 'Image' and can? :delete_image_comment, comment %>
+  <%= link_to 'Delete',delete_image_comment_user_gallery_image_path(params[:gallery_id], comment.id), :remote => true %><br/>
+<%end%>

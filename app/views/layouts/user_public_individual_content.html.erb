@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cinimaker</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= render :partial => '/layouts/top_menu'%><br/>
+  <%= render :partial => '/layouts/sub_nav_one'%><br/>
+  <%= render :partial => '/layouts/sub_nav_two'%><br/>
+  <%= render :partial => '/layouts/sub_nav_three'%><br/>
+  <%= render :partial => '/layouts/banner' %><br/>
+  
+
+  <% flash.each do |key, msg| %>
+    <%= content_tag :div, msg, :id => key %>
+  <% end %>
+  <%= render :partial => '/layouts/user_info_bar'%><br/>
+  <%= render :partial => '/layouts/user_public_menu'%><br/>
+  <%= yield %>
+</body>
+</html>

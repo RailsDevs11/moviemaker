@@ -1,0 +1,11 @@
+<table>
+  <%= f.fields_for :videos, @reels do |form| %>
+  <% if form.object.persisted? %>
+    <%= render :partial => "reels/reel_data", :locals => {:form => form} %>  
+  <% end %>
+  <% end %>
+</table>
+
+
+
+

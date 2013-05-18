@@ -1,0 +1,9 @@
+<tr>
+  <td><%= form.object.title %></td>
+  <td><%= form.object.description %></td>
+  <td><%= image_tag(form.object.video.url) %></td>
+  <td><%= form.check_box '_destroy' %>
+  <%= form.label :_destroy, "Remove"  %></td>
+</tr>    
+
+

@@ -1,0 +1,6 @@
+<tr>
+  <td><%= link_to 'Delete', user_cini_need_path(params[:cini_id], need), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <td><%= need.show_needs %></td>
+  <td>&nbsp;</td>
+  <td><%= link_to 'Edit', edit_user_cini_need_path(params[:cini_id], need) %></td>
+</tr>

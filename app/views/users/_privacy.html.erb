@@ -1,0 +1,43 @@
+<%= form_for(@user_privacy, :url => '/users/update_privacy' ) do |f| %>
+  <% if @user_privacy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_privacy.errors.count, "error") %> prohibited this user_privacy from being saved:</h2>
+
+      <ul>
+      <% @user_privacy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+                      <div class="clearfix" style="margin-left:28px;">
+                        <div style="float:left; width:205px;">
+                          <div class="control-group styleSelect">
+                            <label for="con_request">Connection Requests:</label>
+                            <%= f.select :connection_request, options_for_select(@privacy_option, :selected =>@selected_connection )%>
+                          </div>
+                          <div class="control-group styleSelect">
+                            <label for="messaging">Messaging:</label>
+                            <%= f.select :messaging, options_for_select(@privacy_option, :selected =>@selected_messaging)%>
+                          </div>
+                          <div class="control-group styleSelect">
+                            <label for="extr_search">External Search Engine:</label>
+                            <%= f.select :search_engine, options_for_select(@privacy_option, :selected =>@selected_search)%>
+                          </div>
+                        </div>
+                        <div style="float:left;">
+                          <div class="control-group styleSelect">
+                            <label for="allow_cini">Allow Cini Role Invitations</label>
+                            <select id="allow_cini" name="allow_cini">
+                              <option value="">None</option>
+                              <option value="">Everyone</option>
+                              <option value="">Two</option>
+                            </select>
+                          </div>
+                        </div>  
+                      
+                      </div>
+                      <div class="saveBox">
+                        <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                      </div>
+                      <% end %>

@@ -1,0 +1,29 @@
+<div class="posterBox">
+  <a href="javascript:void(0);"><%= image_tag(@cini.cini_public_profile_image) %></a>
+</div><!--posterBox-->
+
+<div class="cpSidebarIn boxshadow">
+	<div class="logline">
+   	<h4>Logline</h4>
+    <p><%= @cini.log_line %></p>
+  </div>	
+  <div class="about">
+  	<h4>Synopsis</h4>
+    <p><%= @cini.synopsis %></p>
+    <p><a class="readMore" href="#">Read More &gt;</a></p>
+  </div>
+  <div class="tumbsBox clearfix">
+  	<h4>Followers</h4>
+    <ul class="thumbs1">
+    	<%= render :partial => "layouts/follower_image", :collection => @cini.get_cini_followers %>
+    </ul>
+    <p><a class="viewAll" href="#">View All &gt;</a></p>
+  </div>
+  <div class="tumbsBox clearfix">
+  	<h4>Followers</h4>
+    <ul class="thumbs1">
+      <%= render :partial => "layouts/follower_image", :collection => @cini.get_cini_followers %>
+    </ul>
+    <p><a class="viewAll" href="#">View All &gt;</a></p>
+  </div>
+</div><!--cpSidebarIn-->

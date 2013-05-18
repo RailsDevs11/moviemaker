@@ -1,0 +1,412 @@
+      <%= render :partial => "layouts/user_setting_left" %>      
+			<div class="adminRightContent">
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="Profile_tab_con">
+            <%= render :partial => "devise/registrations/profile" %>
+					</div>
+					<!--#Profile_tab_con-->
+                    
+					<div class="tab-pane fade" id="Reels_tab_con">
+                        <div class="reelHead">
+                        	<button class="btn uppercase2">+ ADD</button>
+                        </div>
+                        <div class="reelElementWrap">
+                          <div class="reelBox clearfix">
+                              <div class="reelContent">
+                                  <img src="/assets/reel_content1.jpg" alt="">
+                              </div>
+                              <div class="reelEditInfo">
+                                  <h3 class="reelTitle">Outtakes Reel</h3>
+                                  <p><a href="#" class="btn">EDIT INFO</a></p>
+                                  <p><a href="#" class="btn">FEATURE REEL</a></p>
+                              </div>
+                          </div>
+
+                          <div class="editReelBox clearfix">
+                              <h3 class="reelTitle">Edit Real</h3>
+                              <div class="clearfix" style="margin-bottom:7px;">
+                                  <div class="reelLeft">
+                                      <div class="reelContent">
+                                          <img src="/assets/reel_content1.jpg" alt="">
+                                      </div>
+                                      <div class="clearfix">
+                                          <div class="realType styleSelect">
+                                              <label for="reel_type">Reel Type</label>
+                                              <select name="reel_type">
+                                                  <option value="">FILM</option>
+                                                  <option value="">Documentary</option>
+                                                  <option value="">Hunt</option>
+                                              </select>
+                                          </div>
+                                          <div class="realYear styleSelect">
+                                              <label for="reel_year">Year</label>
+                                              <select name="reel_year">
+                                                  <option value="">2008</option>
+                                                  <option value="">2012</option>
+                                                  <option value="">2013</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!--reelLeft-->
+                                  <div class="reelRight">
+                                      <label for="reel_title">Title</label>
+                                      <input type="text" name="reel_title" id="reel_title" placeholder="Rad Movie is Rad">
+                                      <label for="reel_description">Description</label>
+                                      <textarea id="reel_description" placeholder=""></textarea>
+                                  </div>
+                                  <!--reelRight-->
+                              </div>
+                              <div class="clearfix">
+                                  <div class="reelRoll">
+                                      <label for="reel_roll">Roll</label>
+                                      <input type="text" name="reel_roll" id="reel_roll" placeholder="Writer.Director">
+                                  </div>
+                                  <div class="linkToCini">
+                                      <label for="link_to_cini">Link To Cini</label>
+                                      <input type="url" name="link_to_cini" id="link_to_cini" placeholder="http://imdb.com/radmovieisrad">
+                                  </div>
+                              </div>
+                              <div class="featureBtn clearfix">
+                                  <div class="pull-left">
+                                      <button class="btn btnBrown uppercase2">FEATURED REEL</button>
+                                  </div>
+                                  <div class="pull-right alignRight">
+                                      <button class="btn uppercase"><i class="icon-grid"></i> SAVE</button>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--editRealBox-->
+                          <div class="reelBox clearfix">
+                              <div class="reelContent">
+                                  <img src="/assets/reel_content3.jpg" alt="">
+                              </div>
+                              <div class="reelEditInfo">
+                                  <h3 class="reelTitle">Conceptual Art Reel</h3>
+                                  <p><a href="#" class="btn">EDIT INFO</a></p>
+                                  <p><a href="#" class="btn">FEATURE REEL</a></p>
+                              </div>
+                          </div>
+                        </div>
+                        <!--reelElementWrap-->
+                        
+                        <div class="upLoadPart"> <!-- add hide class to hide the full upload part-->
+                          <div class="reelHead">
+                              <div class="upLoadRealBox clearfix">
+                                  <h3 class="reelTitle">NEW REEL</h3>
+                                  <div class="pull-left">
+                                      <a href="#" class="btn">SELECT FILE</a>
+                                      <span class="fineName">myReel_file_213.mov</span>
+                                  </div>
+                                  <div class="pull-right">
+                                      <a href="#" class="btn uppercase"><i class="icon-grid"></i> UPLOAD</a>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <div class="reelElementWrap">
+                              <div class="reelBox clearfix">
+                                  <div class="reelContent">
+                                      <img src="/assets/reel_content1.jpg" alt="">
+                                  </div>
+                                  <div class="reelEditInfo">
+                                      <h3 class="reelTitle">Outtakes Reel</h3>
+                                      <p>
+                                          <a href="#" class="btn">EDIT INFO</a>
+                                      </p>
+                                      <p>
+                                          <a href="#" class="btn">FEATURE REEL</a>
+                                      </p>
+                                  </div>
+                              </div>
+                              <!--reelBox-->
+                              <div class="reelBox clearfix">
+                                  <div class="reelContent">
+                                      <img src="/assets/reel_content3.jpg" alt="">
+                                  </div>
+                                  <div class="reelEditInfo">
+                                      <h3 class="reelTitle">Conceptual Art Reel</h3>
+                                      <p>
+                                          <a href="#" class="btn">EDIT INFO</a>
+                                      </p>
+                                      <p>
+                                          <a href="#" class="btn">FEATURE REEL</a>
+                                      </p>
+                                  </div>
+                              </div>
+                              <!--reelBox-->
+                          </div>
+                          <!--reelElementWrap-->
+                          <div class="saveBox">
+                              <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                          </div>
+                        </div>
+                        <!--upLoadPart-->
+
+                        <div class="completePart"> 
+                            <div class="reelHead">
+                                <div class="completeBox">
+                                    <h3 class="reelTitle"><span>25%</span> COMPLETE </h3>
+                                    <div class="progressBox">
+                                        <div class="progress progress-striped active">
+                                            <div class="bar" style="width: 25%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--progressBox-->
+                                    <div class="in clearfix">
+                                        <div class="clearfix">
+                                            <div class="realType styleSelect">
+                                                <label for="reel_type">Type</label>
+                                                <select name="reel_type">
+                                                    <option value="">FILM</option>
+                                                    <option value="">Documentary</option>
+                                                    <option value="">Hunt</option>
+                                                </select>
+                                            </div>
+                                            <div class="realYear styleSelect">
+                                                <label for="reel_year">Year</label>
+                                                <select name="reel_year">
+                                                    <option value="">2008</option>
+                                                    <option value="">2012</option>
+                                                    <option value="">2013</option>
+                                                </select>
+                                            </div>
+                                            <div class="titleInput">
+                                                <label for="cm_titile">Title</label>
+                                                <input type="text" name="title" id="cm_titile">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label for="cm_description">Description</label>
+                                            <textarea name="description" id="cm_description"></textarea>
+                                        </div>
+                                        <div class="clearfix">
+                                            <div class="reelRoll">
+                                                <label for="reel_roll">Roll</label>
+                                                <input type="text" name="reel_roll" id="reel_roll">
+                                            </div>
+                                            <div class="linkToCini">
+                                                <label for="link_to_cini">Link To Cini</label>
+                                                <input type="url" name="link_to_cini" id="link_to_cini">
+                                            </div>
+                                        </div>
+                                        <div class="control-group alignRight">
+                                            <button class="btn uppercase"><i class="icon-grid"></i> SAVE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reelElementWrap">
+                                <div class="reelBox clearfix">
+                                    <div class="reelContent">
+                                        <img src="/assets/reel_content1.jpg" alt="">
+                                    </div>
+                                    <div class="reelEditInfo">
+                                        <h3 class="reelTitle">Outtakes Reel</h3>
+                                        <p><a href="#" class="btn">EDIT INFO</a></p>
+                                        <p><a href="#" class="btn">FEATURE REEL</a></p>
+                                    </div>
+                                </div>
+                                <div class="reelBox clearfix">
+                                    <div class="reelContent">
+                                        <img src="/assets/reel_content3.jpg" alt="">
+                                    </div>
+                                    <div class="reelEditInfo">
+                                        <h3 class="reelTitle">Conceptual Art Reel</h3>
+                                        <p><a href="#" class="btn">EDIT INFO</a></p>
+                                        <p><a href="#" class="btn">FEATURE REEL</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="saveBox">
+                                <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                            </div>
+                        </div>
+                        <!--completePart-->
+
+					</div>
+					<!--#Reels_tab_con-->                  
+					<div class="tab-pane fade" id="Images_tab_con">
+                      <div class="part1">
+                        <div class="imageHead">
+                            <a href="#" class="btn">+ ADD GALLERY</a>
+                        </div>
+                        <div class="imageGalBox">
+                            <a href="#" class="close2"></a>
+                            <div class="top">
+                                <h3>Behind the scenes <a href="#" class="editButton"></a></h3>
+                                <div class="imageGal">
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image4.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image3.png" alt="">
+                                    </div>
+                                </div>
+                                <!--imageGal-->
+                            </div>
+                            <div class="bottom">
+                                <div class="styleSelect">
+                                    <label for="privacy">Privacy</label>
+                                    <select name="privacy">
+                                        <option value="">Everyone</option>
+                                        <option value="">None</option>
+                                        <option value="">Single</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn uppercase2">ADD PHOTO</a>
+                                <div class="pull-right alignRight">
+                                    <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/imageGalBox-->
+                        <div class="saveBox">
+                            <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                        </div>
+                      </div><!--part1-->
+                      
+                      <div class="part2">
+                        <div class="imageHead">
+                           <div class="upLoadRealBox clearfix">
+                            <h3 class="reelTitle">NEW GALLERY</h3>
+                            <div class="pull-left"> 
+                              <a href="#" class="btn">SELECT FILE</a> <span class="fineName">myPhoto_file_213.jpg ... myPhoto_file_219.jpg</span> 
+                            </div>
+                            <div class="pull-right"> 
+                               <a href="#" class="btn uppercase"><i class="icon-grid"></i> UPLOAD</a> 
+                            </div>
+                          </div>
+                        </div>
+                        <div class="imageGalBox">
+                            <a href="#" class="close2"></a>
+                            <div class="top">
+                                <h3>Behind the scenes <a href="#" class="editButton"></a></h3>
+                                <div class="imageGal">
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image4.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image3.png" alt="">
+                                    </div>
+                                </div>
+                                <!--imageGal-->
+                            </div>
+                            <div class="bottom">
+                                <div class="styleSelect">
+                                    <label for="privacy">Privacy</label>
+                                    <select name="privacy">
+                                        <option value="">Everyone</option>
+                                        <option value="">None</option>
+                                        <option value="">Single</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn uppercase2">ADD PHOTO</a>
+                                <div class="pull-right alignRight">
+                                    <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="saveBox">
+                            <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                        </div>
+                      </div><!--part2-->
+                      
+                      <div class="part3">
+                      <div class="imageHead">
+                         <div class="completeBox">
+                            <h3 class="reelTitle"><span>25%</span> COMPLETE </h3>
+                            <div class="progressBox">
+                                <div class="progress progress-striped active">
+                                    <div class="bar" style="width: 25%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--progressBox-->
+                            <div class="in clearfix">
+                              <div class="pull-left">
+                                  <label for="cm_titile">Title</label>
+                                  <input type="text" name="title" id="cm_titile">
+                              </div>
+                              <div class="pull-right alignRight">
+                                  <button class="btn uppercase mid"><i class="icon-grid"></i> SAVE</button>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="imageGalBox">
+                          <a href="#" class="close2"></a>
+                          <div class="top">
+                              <h3>Behind the scenes <a href="#" class="editButton"></a></h3>
+                              <div class="imageGal">
+                                  <div class="img">
+                                      <a href="#" class="cancel"></a>
+                                      <img src="/assets/update-image1.png" alt="">
+                                  </div>
+                                  <div class="img">
+                                      <a href="#" class="cancel"></a>
+                                      <img src="/assets/update-image4.png" alt="">
+                                  </div>
+                                  <div class="img">
+                                      <a href="#" class="cancel"></a>
+                                      <img src="/assets/update-image3.png" alt="">
+                                  </div>
+                              </div>
+                              <!--imageGal-->
+                          </div>
+                          <div class="bottom">
+                              <div class="styleSelect">
+                                  <label for="privacy">Privacy</label>
+                                  <select name="privacy">
+                                      <option value="">Everyone</option>
+                                      <option value="">None</option>
+                                      <option value="">Single</option>
+                                  </select>
+                              </div>
+                              <a href="#" class="btn uppercase2">ADD PHOTO</a>
+                              <div class="pull-right alignRight">
+                                  <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="saveBox">
+                          <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                      </div>
+                    </div><!--part3-->
+                    
+					</div>
+					<!--#Images_tab_con-->
+                    
+					<div class="tab-pane fade" id="Credits_tab_con">
+            <%= render :partial => "credits/credits" %>                      
+					</div>
+					<!--#Credits_tab_con-->
+                    
+					<div class="tab-pane fade" id="Account_tab_con">
+				    <%= render :partial => "account/account" %> 
+					</div>
+					<!--#Account_tab_con-->
+                    
+					<div class="tab-pane fade" id="Privacy_tab_con">
+            <%= render :partial => "users/privacy" %>           
+					</div>
+					<!--#Privacy_tab_con-->
+                    
+					
+				</div>
+				<!--tab-content-->
+			</div>
+			<!--adminRightContent-->

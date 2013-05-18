@@ -1,0 +1,4 @@
+Galleries > <%= @gallery.title %>
+<table>
+<%= render :partial => "user_public_galleries/image_list", :collection => @gallery.images %>
+</table>

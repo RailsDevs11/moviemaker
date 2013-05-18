@@ -1,0 +1,8 @@
+  <tr>
+  	<td><%#= image_tag(user.avatar.image.url) if user.avatar.present?  %></td>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td></td>
+    <% invite = user.is_invited?(@role, @cini) %>
+    <td><%= !invite ? (link_to 'Invite', invite_user_cini_role_path(:user_id => user.id)) : invite %></td>
+  </tr>

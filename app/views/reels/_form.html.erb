@@ -1,0 +1,26 @@
+<%= form_for(current_user, :url => "#{create_videos}", :html => {:method => :post, :multipart => true }) do |f| %>
+  
+  <% if current_user.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+        <% current_user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="items">
+    <%= f.nested_fields_for :videos do |form| %>  
+      <% unless form.object.persisted? %>
+        <%= render :partial => 'reels/reel_content', :locals => { :form => form } %>
+      <% end %>
+    <% end %>
+  </div>
+
+ <a href="#" class="add">Add Another</a>
+
+  <div class="actions">
+    <%= f.submit 'Save Changes' %>
+  </div>
+<% end %>

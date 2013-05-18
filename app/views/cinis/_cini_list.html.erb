@@ -1,0 +1,10 @@
+<tr>
+  <td><h4><%= link_to cini_list.title, edit_user_cini_path(cini_list) %></h4></td>
+  <td><%= link_to 'Publish', change_cini_status_user_cini_path(cini_list, :is => 1) %> |</td>
+  <td><%= link_to 'Hide-cini', change_cini_status_user_cini_path(cini_list, :is => 0) %> |</td>
+  <td><%= link_to 'Delete-Cini', user_cini_path(cini_list), method: :delete, data: { confirm: 'Are you sure?' } %> |</td>
+
+  <td><%= check_cini_follower(cini_list.id) %> |</td>
+  <td>Followers :<%= cini_list.followers.count %> </td>
+</tr>
+

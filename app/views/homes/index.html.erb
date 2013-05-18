@@ -1,0 +1,89 @@
+<!--topBar End-->
+    <div class="messageWrap hide">
+    	<div class="in brown">
+        	<p><span>Orange Messages are Cinimail </span>   Want to learn more?</p>
+        </div>
+    </div><!--messageWrap-->
+    
+	<div class="homeWrap clearfix">
+	<div class="homeLeftCon">
+		<div class="updateStatus boxshadow">
+			<h2>UPDATE STATUS</h2>
+			<div class="updatePostBox clearfix">
+        <%= render :partial => 'post' %>
+			</div>
+		</div>
+		<div class="topTrend boxshadow">
+         <h2>TOP TRENDING CINI’s</h2>
+         <%= render :partial => "slider_cinis" %>
+		</div>
+		<!--topTrend-->
+        <div class="homeTabWrap boxshadow">
+        	<ul class="homeTabNav clearfix">
+				<li class="active"><a href="#Updates_tab_con" data-toggle="tab">Updates</a></li>
+				<li><a href="#Needs_tab_con" data-toggle="tab">needs</a></li>  
+           </ul>
+           
+           <div class="tab-content">
+            <div class="tab-pane fade in active" id="Updates_tab_con">
+                <div class="updateTabOuter">
+                  <div class="updateTabConIn">
+                    <%= render :partial => "feed_alerts" %>
+                 </div><!--updateTabConIn-->
+				<% unless @updates.total_pages < 2 %>
+     				<div id="bottomBorder" class="show_more_link_updates">
+						<%= link_to '', more_feeds_homes_path(  :updates => @updates.next_page), :remote => true, :id => "bottomClick"%>
+    				</div>
+				<% end %>
+               </div>
+            </div>
+            
+            <div class="tab-pane fade" id="Needs_tab_con">
+                <div class="needsTabOuter">
+                  <div class="needsTabConIn">
+                    <%= render :partial => "homes/need_records" %>
+                      
+                 </div><!--needsTabConIn-->
+				 <% unless @needs.total_pages < 2 %>
+				    <div id="bottomBorder" class="show_more_link_needs">
+						<%= link_to '', more_needs_homes_path(  :need => @needs.next_page), :remote => true, :id => "bottomClick"%>
+     				</div>
+       			<% end %>
+               </div>
+            </div>
+
+           </div><!--tab-content-->
+        
+        </div><!--homeTabWrap-->
+        
+	</div>
+	<!--homeLeftCon-->
+  <div class="homeRightCon">
+    <div class="ciniKnowU boxshadow">
+      <h2>CINIMAKERS YOU MAY KNOW</h2>
+      <%= render :partial => "shared/users_list" %>
+      <p><a href="#" class="readMore">Read More &gt;</a></p>
+		</div>
+		<!--youMayKnow-->
+        
+        <div class="ciniLooking boxshadow">
+        <h2>CINI’s LOOKING FOR YOU</h2>
+        <%= render :partial => "shared/cinis_list" %>
+        <p><a href="#" class="readMore">Read More &gt;</a></p>
+		</div>
+		<!--youMayKnow-->
+        
+        <div class="newCini boxshadow">
+          <h2>NEW CINIMAKERS</h2>
+          <%= render :partial => "shared/users_list" %>
+          <p><a href="#" class="readMore">Read More &gt;</a></p>
+        </div>
+		<!--youMayKnow-->
+        
+	</div>
+	<!--homeRightCon-->
+</div>
+<!--homeWrap-->
+
+
+

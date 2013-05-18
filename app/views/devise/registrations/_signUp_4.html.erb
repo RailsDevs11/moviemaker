@@ -1,0 +1,51 @@
+<div class="signupContent" id="step_4">
+  <div class="inner2">
+    <div class="signupBreadcrumbs bg3">
+      <ul class="breadcrumb1">
+        <li class="inactive step signup1" div-id="1"><a href="javascript:void(0);">1. SIGN UP</a></li>
+        <li class="inactive step" div-id="2"><a href="javascript:void(0);">2. STYLE</a></li>
+        <li class="inactive step" div-id="3"><a href="javascript:void(0);">3. PHOTO</a></li>
+        <li class="active last-child step" div-id="4"><a href="javascript:void(0);">4. DETAILS</a></li>
+      </ul>
+    </div>        
+    <h3>Tell us more about yourself.</h3>
+    <div class="chooseUpBox clearfix">
+        <div class="chooseSelect1">
+          <h4>I am a ( Choose up to 3 )</h4>
+          <div class="control-group styleSelect">
+            <label for="Primary">Primary</label>
+            <%= select_tag "iamas[Primary]", options_for_select(@i_am_a) %>
+          </div>
+          <div class="control-group styleSelect">
+            <label for="Secondary">Secondary</label>
+            <%= select_tag "iamas[Secondary]", options_for_select(@i_am_a) %>
+          </div>
+          <div class="control-group styleSelect">
+            <label for="Tertiary">Tertiary</label>
+            <%= select_tag "iamas[Tertiary]", options_for_select(@i_am_a) %>
+          </div>
+        </div>
+        <div class="chooseSelect2">
+          <h4>Unions ( Choose up to 3 )</h4>
+          <div class="control-group styleSelect">
+            <label for="Primary">Primary</label>
+            <%= select_tag "unions[Primary]", options_for_select(@unions) %>
+          </div>
+          <div class="control-group styleSelect">
+            <label for="Secondary">Secondary</label>
+            <%= select_tag "unions[Secondary]", options_for_select(@unions) %>
+          </div>
+          <div class="control-group styleSelect">
+            <label for="Tertiary">Tertiary</label>
+            <%= select_tag "unions[Tertiary]", options_for_select(@unions) %>
+          </div>
+          <input type="hidden" value="" name="tag_flag" class="tag_flag">
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <button type="submit" class="btn uppercase2 skip_step4" id="submit_button">SKIP</button>
+        <button type="submit" class="btn uppercase2" id="submit_button">FINISH</button>
+      </div>
+  </div><!--inner2-->
+</div>
+

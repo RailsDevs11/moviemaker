@@ -1,0 +1,14 @@
+<li>
+  <div class="avatar">
+    <%= image_tag(cini_record.cini_profile_image)%>
+  </div>
+  <div class="textBox">
+    <h5><%= get_capitalize(cini_record.title) %></h5>
+    <span class="mCategory">Drama</span>
+    <p>Followers: <strong><%= cini_record.followers.count %></strong></p>
+    <p>“<%= get_capitalize_with_truncate(cini_record.log_line) %>”</p>
+  </div>
+</li>
+
+
+

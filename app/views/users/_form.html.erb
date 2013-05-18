@@ -1,0 +1,29 @@
+<%= form_for(@user_privacy, :url => '/users/update_privacy' ) do |f| %>
+  <% if @user_privacy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_privacy.errors.count, "error") %> prohibited this user_privacy from being saved:</h2>
+
+      <ul>
+      <% @user_privacy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <label for="user_privacy_connection_request">Connection Rsequest</label>
+    <%= f.select :connection_request, options_for_select(@privacy_option, :selected =>@selected_connection )%>   
+  </div>
+  <div class="field">
+    <%= f.label :messaging %>
+    <%= f.select :messaging, options_for_select(@privacy_option, :selected =>@selected_messaging)%>
+  </div>
+  <div class="field">
+    <label for="user_privacy_search_engine">External Search Engine</label>
+    <%= f.select :search_engine, options_for_select(@privacy_option, :selected =>@selected_search)%>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save Changes' %>
+  </div>
+<% end %>

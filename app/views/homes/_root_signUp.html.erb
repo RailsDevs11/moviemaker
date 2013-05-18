@@ -1,0 +1,27 @@
+<div class="landingContent">
+   <div class="filmMakerSologan bigSologan big">
+      <a href="javascript:void(0);"><img src="/assets/fimmaker_network-big.png" alt="THE FILMMAKER NETWORK"></a>
+   </div>
+   <div class="filmMakerSologan smallSologan hide">
+      <a href="javascript:void(0);"><img src="/assets/fimmaker_network.png" alt="THE FILMMAKER NETWORK"></a>
+   </div>
+	<div class="in clearfix rootSignupContent" id="step_1">
+	  <%= render :partial => 'homes/latest_member' %>
+	  <div class="infographic">
+	    <a href="#"><img src="/assets/infographic-connect.jpg" alt="infographics-connect-concept"></a>
+	  </div>
+	  <%= render :partial => 'homes/root_signUp_1', :locals => { :f => f } %>
+	</div><!--in-->
+   <div class="bottomSearchWrap">
+     <%= render :partial => 'homes/search' %>
+   </div>
+   <div style="padding:0px 10px 15px 10px;">
+     <%= render :partial => 'devise/registrations/signUp_2', :locals => { :f => f } %>
+     <%= render :partial => 'devise/registrations/signUp_3', :locals => { :f => f } %>
+     <%= render :partial => 'devise/registrations/signUp_4', :locals => { :f => f } %>
+   </div>
+</div><!--landingContent-->
+
+
+
+              

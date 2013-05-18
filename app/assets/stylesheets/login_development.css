@@ -1,0 +1,9 @@
+/*Custom css*/
+
+/* alert flash massage*/
+#alert {
+  position: absolute;
+  color: red;
+  margin: 10px 0 0 380px;
+  top: 35px;
+}

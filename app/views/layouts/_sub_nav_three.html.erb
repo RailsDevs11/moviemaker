@@ -1,0 +1,27 @@
+
+         <div class="subNavThree animated fadeInDown fadeOutUp" style="display: none;">
+                      <div class="subIn-upgrade subNavText">
+                          <h5><a href="#"><span class="blue">Upgrade</span></a></h5>
+                          <p>Discover Premium tools</p>
+                      </div>
+                      <div class="subIn-myProfile subNavText">
+                          <h5><a href="#">My Profile</a></h5>
+                          <p>Go to your profile page.</p>
+                      </div>
+                      <div class="subIn-following subNavText">
+                          <h5><a href="#">Following</a></h5>
+                          <p>All the things you follow on Cinimaker</p>
+                      </div>
+                      <div class="subIn-inbox subNavText">
+                          <h5><%= link_to '<span class="brown">Inbox</span>'.html_safe, user_inbox_path %></h5>
+                          <p>Read and send messages and notifications.</p>
+                      </div>
+                      <div class="subIn-mySetting subNavText">
+                          <h5><%= link_to 'My Settings', user_profile_path %></h5>
+                          <p>Change your profile, Account and privacz settings,</p>
+                      </div>
+                       <div class="subIn-logOut subNavText">
+                          <h5><%= link_to 'LogOut', destroy_user_session_url, :method=> :delete %><a href="#"></a></h5>
+                          <p>Go Shoot a Film.</p>
+                      </div>
+                  </div><!--subNavThree--> 

@@ -1,0 +1,9 @@
+<tr>
+  <td><%= form.object.character %></td>
+  <td><%= form.object.description %></td>
+  <td><%= link_to 'Edit', edit_user_cini_role_path(params[:cini_id], form.object.id) %> |</td>
+  <td><%= link_to 'Delete', user_cini_role_path(params[:cini_id], form.object.cini_id), method: :delete, data: { confirm: 'Are you sure?' } %> |</td>
+  <td><%= link_to 'Invite a Cinimaker', user_cini_role_path(params[:cini_id], form.object.id) %></td>
+</tr>    
+
+

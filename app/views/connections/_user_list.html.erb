@@ -1,0 +1,7 @@
+  <%= user_list.first_name%> 
+  <%if info == "options" %>
+    <%= link_to "Accept-as-friend", connection_path(user_list, :relation => "friend", :status => "accepted"), :method => :put, :remote => true %> |
+    <%= link_to "Accept-as-follower",connection_path(user_list, :relation => "follower", :status => "accepted"),  :method => :put, :remote => true %> |
+    <%= link_to "reject",connection_path(user_list,:relation => "rejected",:status => "rejected"),:confirm => 'Are you sure want to delete request?',  :method => :put, :remote => true %>
+  <%end%>
+  <br/>

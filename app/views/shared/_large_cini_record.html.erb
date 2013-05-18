@@ -1,0 +1,12 @@
+<li>
+  <a href="#"><%= image_tag(large_cini_record.cini_large_image)%></a>
+  <h4><%= get_capitalize(large_cini_record.title) %></h4>
+  <p>Horror</p>
+  <div class="tooltip1">
+  <h4 class="title"><%= get_capitalize(large_cini_record.title) %></h4>
+  <span class="mCategory">Horror</span>
+  <div class="generalText"><%= get_capitalize_with_truncate(large_cini_record.log_line) %></div>
+  <p class="generalInfo">Followers: <strong><%= large_cini_record.followers.count %></strong></p>
+  <p><a href="#">View Cini &gt;</a></p>
+  </div><!--tooltip1-->
+</li>

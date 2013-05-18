@@ -1,0 +1,16 @@
+<%# followed_status = current_user.is_followed?(@cini.id) ? "UNFOLLOW" : "FOLLOWING" %>
+<%#= link_to followed_status, current_user.return_followed_path(@cini.id), :method => :get, :class => "btn btngrey uppercase2" %>
+<a href="javascript:void(0);" class="btn btngrey uppercase2">FOLLOWING</a>
+<a class="btn uppercase" href="javascript:void(0);"><i class="icon-message"></i> MESSAGE</a>
+<a href="javascript:void(0);" class="btn uppercase"><i class="icon-message"></i> RECOMMEND</a>
+<a class="btn uppercase" href="javascript:void(0);"><i class="icon-share"></i> SHARE</a>
+
+<%# unless is_connected? %>
+  <%#= link_to "+CONNECT", add_connection_user_connection_path(@user.id) %> 
+<%# else %>
+  <%#= link_to("DISCONNECT", brack_connection_user_connection_path(@user.id), :method => :delete, :confirm => "Are you sure?") %>
+<%# end %>
+
+
+
+

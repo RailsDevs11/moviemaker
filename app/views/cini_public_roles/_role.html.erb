@@ -1,0 +1,18 @@
+  <% status = role.get_role_status != "Apply" %>
+
+  <li>
+    	<div class="crewAvatar">
+        <%= image_tag(role.user_image_to_public_role) %>
+      </div><!--crewAvatar-->
+      <div class="textBox">
+        <% if status %>
+          <h4><%= get_capitalize(role.get_role_status) %></h4>
+        <% else %>
+          <h4 class="roled"><%= link_to role.role_pedding_status(current_user.id), cini_cini_public_role_path(@cini.id, role.id) %></h4>
+        <% end %>
+        <p><%= role.character %></p>	
+      </div><!--textBox-->
+       <div style="display: none;" class="roleTooltip">
+         <%= render :partial => "cini_public_roles/role_tooltip_records", :locals=>{:role => role} %>
+       </div><!--roleTooltip-->
+  </li>

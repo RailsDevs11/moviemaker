@@ -1,0 +1,6 @@
+<tr>
+<td><%= request.cini.title %></td>
+<td>Would like you to be their <%= request.role.character %></td>
+<td><%= link_to "Accept", update_status_role_path(request.id, :status => 'accepted'), :remote => true %></td>
+<td><%= link_to "Reject", update_status_role_path(request.id, :status => 'rejected'), :remote => true %></td>
+</tr>

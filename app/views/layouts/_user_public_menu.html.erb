@@ -1,0 +1,60 @@
+<div class="movieBox boxshadow">
+  <%= render :partial => "cini_public_videos/main_video"%>
+</div>
+
+<div class="cpTabContent boxshadow">
+	<ul class="cpTabNav clearfix">
+	  <li class="active"><a href="#Cinis" data-toggle="tab">CINIS</a></li>
+      <li><a href="#Reel" data-toggle="tab">REEL</a></li>
+      <li><a href="#Galleries_tab_con" data-toggle="tab">GALLERIES</a></li>
+      <li><a href="#Credits" data-toggle="tab">CREDITS</a></li>
+      <li><a href="#Updates_tab_con" data-toggle="tab">Updates</a></li>
+      <li><a href="#Needs_tab_con" data-toggle="tab">Needs</a></li>
+    </ul>
+    
+    <div class="tab-content">
+			<div class="tab-pane fade in active" id="Cinis">
+		      <div class="ciniTabConIn">
+		      	<%= render :template => "user_public_cinis/index" %>
+		      </div>
+			</div><!--#Cinis-->
+		    <div class="tab-pane fade" id="Reel">
+		      <div class="vidTabConIn">
+		      	<%= render :template => "user_public_reels/index" %>
+		      </div>
+		    </div><!--#Reel-->
+		    <div class="tab-pane fade" id="Galleries_tab_con">
+				<div class="galleryTabConIn clearfix">
+				  <%= render :template => "user_public_galleries/index" %>
+		        </div><!--galleryTabConIn-->
+			</div><!--#Galleries_tab_con-->
+			<div class="tab-pane fade" id="Credits">
+		        <div class="dataListTbl">
+		        	<%= render :template => "user_public_credits/index" %>
+		        </div><!--dataListTbl-->
+			</div><!--#Crew_tab_con-->
+			<div class="tab-pane fade" id="Updates_tab_con">
+				<div class="updateTabOuter">
+		          <div class="updateTabConIn">
+		              <ul class="updatesElem">
+		                <%= render :partial => "homes/feed", :collection => @updates %> 
+		              </ul>
+		         </div><!--updateTabConIn-->
+		       </div>
+			</div><!--#Updates_tab_con-->
+			<div class="tab-pane fade" id="Needs_tab_con">
+				<div class="needsTabOuter">
+		          <div class="needsTabConIn">
+		              <ul class="needConRow">
+		                  <%= render :partial => "homes/need", :collection => @needs %> 
+		              </ul>
+		         </div><!--needsTabConIn-->
+		       </div>
+			</div><!--#Needs_tab_con-->
+    </div><!--tab-content-->
+</div><!--cpTabContent-->
+
+<div class="modal hide fade" id="comment_overlay1">
+  <%= render :partial => "cini_public_videos/public_comment_popup"%>
+</div><!--modal End-->
+ 

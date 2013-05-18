@@ -1,0 +1,114 @@
+<div class="accountHeading">
+                        	<h3>ACCOUNT STATUS: <span>FREEMIUM</span></h3>
+                            <button class="btn btnBrown uppercase2">UPGRADE</button>
+                        </div><!--accountHeading-->
+<div class="accountHeading" id="account_type">
+  <% if current_user.is_creative? %>
+    <h3>Account Type: <span><%= current_user.account_type.name.capitalize %></span></h3>
+  <% else %>
+    <h3>Change Account Type to Creative: <span><%= link_to current_user.account_type.name.capitalize,       change_to_creative_user_account_index_path, :method => :post, :remote => true %></span></h3>
+  <% end %>
+                        </div><!--accountHeading-->
+                        <form>
+                        <div class="accountEmailBlock">
+                        	<h5 class="ac_edit_title">Email</h5>
+                            <p class="user_email">imsuppercoll@domain.com</p>
+                            <div class="userEmailSetting clearfix">
+                            	<div class="newemail_1">
+                                	<label for="new_email">New Email</label>
+                                    <input type="email" name="new_email" id="new_email">
+                                </div>
+                                <div class="newemail_2">
+                                	<label for="new_password">New Password</label>
+                                    <input type="password" name="new_password" id="new_password">
+                                </div>
+                                <div class="newemail_3">
+                                	<label for="new_password2">New Password (repeat)</label>
+                                    <input type="password" name="new_password2" id="new_password2">
+                                </div>
+                            </div>
+                        </div><!--accountEmailBlock-->
+                        <div class="accountBillingBlock clearfix">
+                        	<h5 class="ac_edit_title">Email</h5>
+                            <div class="leftBlock">
+                            	<div class="control-group">
+                                	<label for="full_Name">Full Name</label>
+                                    <input type="text" name="full_Name" id="full_Name">
+                                </div>
+                                <div class="control-group">
+                                	<label for="user_address">Address</label>
+                                    <input type="text" name="user_address" id="user_address">
+                                </div>
+                                <div class="control-group">
+                                	<label for="user_pobox">apt / P.O. Box</label>
+                                    <input type="text" name="user_pobox" id="user_pobox">
+                                </div>
+                                <div class="control-group">
+                                	<label for="user_city">City</label>
+                                    <input type="text" name="user_city" id="user_city">
+                                </div>
+                                <div class="control-group clearfix">
+                                	<div class="user_state_box styleSelect">
+                                      <label for="user_state">State</label>
+                                      <select name="user_state">
+                                          <option value="">state</option>
+                                          <option value="">One</option>
+                                          <option value="">Two</option>
+                                      </select>
+                                    </div>
+                                    <div class="user_zip_box">
+                                     <label for="user_zip">Zip</label>
+                                     <input type="text" name="user_zip" id="user_zip">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rightBlock clearfix">
+                            	<div style="margin-bottom:5px" class="clearfix">
+                                	<div class="cardType styleSelect">
+                                    <label for="user_card_type">Card Type</label>
+                                      <select name="user_card_type">
+                                          <option value="">VISA</option>
+                                          <option value="">One</option>
+                                          <option value="">Two</option>
+                                      </select>
+                                    </div>
+                                    <div class="cardNumber">
+                                     <label for="user_card_number">Card Number</label>
+                                     <input type="text" name="user_card_number" id="user_card_number">
+                                    </div>
+                                </div>
+                                <div class="clearfix cardExpiration styleSelect">
+                                <label for="">Expiration</label>
+                                  <select name="card_month">
+                                      <option value="">Month</option>
+                                      <option value="">12</option>
+                                      <option value="">11</option>
+                                  </select>
+                                  <select name="card_Year">
+                                      <option value="">Year</option>
+                                      <option value="">2012</option>
+                                      <option value="">2013</option>
+                                  </select>
+                                </div>
+                            </div>	
+                        </div><!--accountBillingBlock-->
+                        <div class="accountSubscription">
+                        	<h5 class="ac_edit_title">Subscription</h5>
+                            <p>Your next bill cycle is on <a href="#">Oct 15 2012</a></p>
+                            <div class="control-group styleSelect">
+                              <select name="user_monthly_bill">
+                                  <option value="">Monthly $9.99</option>
+                                  <option value="">Monthly $14.99</option>
+                                  <option value="">Monthly $24.99</option>
+                              </select>
+                             </div>
+                        </div><!--accountSubscription-->
+                        <div class="accountDeleteSave clearfix">
+                        	 <div class="pull-left">
+                             	<button class="btn btnDelete uppercase"><i class="icon-delete"></i> DELETE ACCOUNT</button>
+                             </div>
+                              <div class="pull-right alignRight">
+                              <button class="btn uppercase"><i class="icon-grid"></i> SAVE</button>
+                              </div>
+                        </div><!--accountDeleteSave-->
+                       </form>

@@ -1,0 +1,12 @@
+<div class="needsTabOuter">
+  <div class="needsTabConIn" style="height: auto; overflow: visible;">
+    <ul class="needConRow">
+      <%= render :partial => "homes/need", :collection => @needs %>  
+    </ul>
+  </div><!--needsTabConIn-->
+  <% unless @needs.total_pages < 2 %>
+    <div id="bottomBorder" class="show_more_link_needs">
+      <%= link_to '', more_needs_cinis_path(:need => @needs.next_page, :id =>@cini.id), :remote => true, :id => "bottomClick"%>
+    </div>
+  <% end %>
+</div>

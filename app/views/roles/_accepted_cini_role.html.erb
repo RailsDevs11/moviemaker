@@ -1,0 +1,11 @@
+<table>
+  <%= f.fields_for :cini_roles, @cini.cini_roles.accepted_records do |form| %>
+   <tr>
+    <td><%= form.object.user.first_name %></td>
+   	<td><%= form.object.role.character %></td>
+    <td><%= form.label 'is_admin', 'Admin :' %></td>
+    <td><%= form.check_box 'is_admin' %></td>
+    <td><%= link_to "Un-assign-role", un_assign_role_user_cini_role_path(@cini, form.object.role), :method => :post %></td>
+   </tr>
+  <% end %>
+</table>

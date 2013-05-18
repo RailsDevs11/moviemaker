@@ -1,0 +1,9 @@
+<li>
+  <div class="avatar">
+    <%= image_tag(update.updateable.cini.cini_small_image) %>
+  </div>
+  <div class="contentBox">
+    <h4 class="title"><%= get_capitalize(update.updateable.cini.title) %></h4>
+    <p><%= update.alert.html_safe + "on #{update.created_at.to_date.to_formatted_s(:long)}" %></p>
+  </div>
+</li>

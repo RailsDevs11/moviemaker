@@ -1,0 +1,4 @@
+<h1>New gallery</h1>
+<%= form_for @gallery,:url => "#{create_gallery}" do |f| %>
+  <%= render :partial => "galleries/form",:locals =>{:f => f }  %>
+<%end%>

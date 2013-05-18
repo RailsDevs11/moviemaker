@@ -1,0 +1,11 @@
+<tr>
+  <td><%=gallery_list.title%></td>
+  <td><%=gallery_list.description%></td>
+  <td>&nbsp;</td>
+  <td><%= link_to 'Delete-Gallery', "#{delete_gallery(gallery_list)}", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<tr>
+  <%= render :partial => "galleries/image_list", :collection => gallery_list.images, :locals =>{:gallery_list => gallery_list }  %>
+  <td><%=link_to 'Add-image', "#{add_image(gallery_list)}" %></td>
+</tr>
+<br />

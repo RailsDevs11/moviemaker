@@ -1,0 +1,37 @@
+<section class="signingProcess">
+  <div class="pageWrap">
+    <header class="topBar">
+      <div class="siteLogo">
+          <a href="javascript:void(0);" title="Cinimaker"><img src="/assets/logo-cinimaker.png" alt="Cinimaker"></a>
+      </div>
+        
+      <div class="signIn_signUp">
+        <%= render :partial => 'layouts/signin_popup'%> 
+      </div>
+    </header>
+    <!--topBar End-->
+    <div class="messageWrap hide">
+      <div class="in brown">
+        <p><span>Orange Messages are Cinimail </span>   Want to learn more?</p>
+      </div>
+    </div><!--messageWrap-->
+      
+    <div class="mainContainer">
+      <div class="filmMakerSologan">
+        <a href="javascript:void(0);"><img src="/assets/fimmaker_network.png" alt="THE FILMMAKER NETWORK"></a>
+      </div>
+       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true }) do |f| %>
+         <%= render :partial => 'signUp_1', :locals => { :f => f } %>
+         <%= render :partial => 'signUp_2', :locals => { :f => f } %>
+         <%= render :partial => 'signUp_3', :locals => { :f => f } %>
+         <%= render :partial => 'signUp_4', :locals => { :f => f } %>
+       <% end %>
+    </div><!--mainContainer-->
+  </div><!--pageWrap-->
+</section><!--signingProcess-->
+
+
+
+
+
+

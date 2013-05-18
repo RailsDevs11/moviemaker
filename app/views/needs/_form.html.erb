@@ -1,0 +1,35 @@
+  <% if @need.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@need.errors.count, "error") %> prohibited this gallery from being saved:</h2>
+
+      <ul>
+      <% @need.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="actions">
+    <%= f.label :needed_on %>
+    <%= f.text_field :needed_on %>
+  </div>
+  <div class="actions">
+  <%= f.fields_for :images do |img| %>
+    <%= img.label :image %>
+    <%= img.file_field :image %>
+    <%= img.hidden_field :image_cache %>
+    <%= image_tag(img.object.image_url) if img.object.image? %>
+  <% end %>
+  
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>

@@ -1,0 +1,7 @@
+<h1>Editing gallery</h1>
+<%= form_for @gallery,:url => user_gallery_path do |f| %>
+  <%= render :partial => "form",:locals =>{:f => f }  %>
+<% end %>
+
+<%= link_to 'Show', user_gallery_path(@gallery) %>
+<%= link_to 'Back', user_galleries_path %>

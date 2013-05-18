@@ -1,0 +1,14 @@
+
+<div class="adminNewCredit">
+	<h3>NEW CREDIT</h3>
+  <%= render 'credits/form' %>
+</div><!--adminNewCredit-->
+
+<%= form_for current_user, :url => user_credit_path(current_user), :html => {:method => :put} do |f| %>
+  <div class="dataListTbl">
+    <%= render  :partial=> "credits/credit_tag", :collection => @credit_types, :locals => {:f => f} %>
+    <div class="saveBox">
+      <button type="submit" class="btn uppercase"><i class="icon-grid"></i> SAVE</button>
+    </div>
+  </div><!--dataListTbl-->
+<% end %>

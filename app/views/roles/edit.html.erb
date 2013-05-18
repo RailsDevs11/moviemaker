@@ -1,0 +1,4 @@
+<h1>Edit Role</h1>
+<%= form_for @role,:url => user_cini_role_path, :html => { :multipart => true, :method => :put } do |f| %>
+  <%= render :partial => "form",:locals =>{:f => f }  %>
+<%end%>

@@ -1,0 +1,30 @@
+<div class="signupContent" id="step_1">
+  <div class="inner1">
+    <h3>Get Connected - It’s FREE!</h3>
+    <p>Registration takes less than 1 minute</p>
+    <%= devise_error_messages! %>
+    <div class="control-group">
+      <%= f.text_field :first_name, :placeholder => "First Name", :class => "disable_submit"%>
+    </div>
+    <div class="control-group">
+      <%= f.text_field :last_name, :placeholder => "Last Name", :class => "disable_submit" %>
+    </div>
+    <div class="control-group">
+      <%= f.email_field :email, :placeholder => "Email", :class => "disable_submit" %>
+    </div>
+    <div class="control-group">
+      <%= f.password_field :password, :placeholder => "Choose Password", :class => "disable_submit" %>
+    </div>
+    <div class="control-group">
+      <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" , :class => "disable_submit"%>
+    </div>
+    <div class="control-group" style="text-align:right; margin-top:20px;">
+      <button type="button" class="btn uppercase step" div-id="2"><i class="icon-grid"></i> JOIN NOW</button>
+    </div>
+    <div class="joinNowText museoItalic">
+      <p>By clicking “Join Now” or using Cinimaker, you agree to our <a href="javascript:void(0);" title="User Agreement">User Agreement</a> and <a href="javascript:void(0);" title="Privacy Policy">Privacy Policy</a> 
+                thereby joining the entire <a href="javascript:void(0);" title="Cinivision Network">Cinivision Network.</a>
+      </p>
+    </div>
+  </div>
+</div>

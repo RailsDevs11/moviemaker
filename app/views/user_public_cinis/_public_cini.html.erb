@@ -1,0 +1,7 @@
+<li>
+  <%= image_tag(public_cini.cini_image)%>
+  <div class="caption">
+    <h4><%= public_cini.title %></h4>
+    <p><%= public_cini.get_roles_for_cinis(@user.id) %></p>
+  </div>
+</li>

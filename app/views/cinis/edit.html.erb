@@ -1,0 +1,1077 @@
+     <%= render :partial => "layouts/cini_setting_left" %> 
+      <div class="adminRightContent">
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="Details_tab_con">
+            <%= render :partial=> "cinis/cini_profile" %>
+          </div>
+          <!--#Details_tab_con-->
+          <div class="tab-pane fade" id="Videos_tab_con">
+            <div class="vidTabConIn">
+                            <ul class="vidthumb">
+                                <li>
+                                <div class="listVid">
+                                    <img alt="" src="/assets/listvid1.jpg">
+                                </div>
+                                <div class="vidCaption">
+                                    <h4>Trailer</h4>
+                                    <p>90sec</p>
+                                </div>
+                                </li>
+                                
+                                <li>
+                                <div class="listVid">
+                                    <img alt="" src="/assets/listvid2.jpg">
+                                </div>
+                                <div class="vidCaption">
+                                    <h4>Behind The Scenes: Ep1</h4>
+                                    <p>3min 20sec</p>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="listVid">
+                                     <img alt="" src="/assets/listvid3.jpg">
+                                </div>
+                                <div class="vidCaption">
+                                    <h4>Teaser Trailer</h4>
+                                    <p>30sec</p>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="listVid">
+                                    <img alt="" src="/assets/listvid1.jpg">
+                                </div>
+                                <div class="vidCaption">
+                                    <h4>Trailer</h4>
+                                    <p>90sec</p>
+                                </div>
+                                </li>
+                                <li>
+                                <div class="listVid">
+                                     <img alt="" src="/assets/listvid3.jpg">
+                                </div>
+                                <div class="vidCaption">
+                                    <h4>Teaser Trailer</h4>
+                                    <p>30sec</p>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+          </div>
+          <!--#Videos_tab_con-->
+          <div class="tab-pane fade" id="Images_tab_con">
+            <div class="part1">
+                        <div class="imageHead">
+                            <a href="#" class="btn">+ ADD GALLERY</a>
+                        </div>
+                        <div class="imageGalBox">
+                            <a href="#" class="close2"></a>
+                            <div class="top">
+                                <h3>Behind the scenes <a href="#" class="editButton"></a></h3>
+                                <div class="imageGal">
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image4.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <a href="#" class="cancel"></a>
+                                        <img src="/assets/update-image3.png" alt="">
+                                    </div>
+                                </div>
+                                <!--imageGal-->
+                            </div>
+                            <div class="bottom">
+                                <div class="styleSelect">
+                                    <label for="privacy">Privacy</label>
+                                    <select name="privacy">
+                                        <option value="">Everyone</option>
+                                        <option value="">None</option>
+                                        <option value="">Single</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn uppercase2">ADD PHOTO</a>
+                                <div class="pull-right alignRight">
+                                    <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/imageGalBox-->
+                        <div class="saveBox">
+                            <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                        </div>
+                      </div><!--part1-->
+          </div>
+          <!--#Images_tab_con-->
+          <div class="tab-pane fade" id="Crew_tab_con">
+                      
+                        <div class="adminNewCredit">
+                          <h3>NEW CREDIT</h3>
+                            <form>
+                            <div class="innerRow clearfix">
+                              <div class="boxCreditType">
+                                  <label for="credittype">Credit Type</label>
+                                    <select id="credittype" name="credittype">
+                                      <option>FILM</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="boxYear">
+                                  <label for="year">Year</label>
+                                    <select id="year" name="year">
+                                      <option>2012</option>
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                    </select>
+                                </div>
+                                <div class="boxtitle">
+                                  <label for="title">TITLE</label>
+                                   <input type="text" name="title" id="title">
+                                </div>
+                            </div><!--innerRow-->
+                            <div class="innerRow clearfix">
+                              <div class="boxrole">
+                                  <label for="role">Role</label>
+                                    <input type="text" name="role" id="role">
+                                </div>
+                                <div class="boxIMDB">
+                                  <label for="linkimdb">Link to IMDB</label>
+                                    <input type="text" name="linkimdb" id="linkimdb">
+                                </div>
+                            </div><!--innerRow-->
+                            <div class="innerRow" style="text-align:right;">
+                            <button type="submit" class="btn uppercase"><i class="icon-grid"></i> ADD</button>
+                            </div><!--innerRow-->
+                            </form>
+                        </div><!--adminNewCredit-->
+                        
+                        <div class="dataListTbl">
+                          <h4>FILM</h4>
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2011
+                                  </td>
+                                  <td width="35%">
+                                      A Year Without a Face
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer.Director.Producer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn uppercase"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2011
+                                  </td>
+                                  <td width="35%">
+                                      Just the 3 of Us
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Director
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2010
+                                  </td>
+                                  <td width="35%">
+                                      A Time to Live
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer.Director
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2009
+                                  </td>
+                                  <td width="35%">
+                                      Now We Dance
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer.Director
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2008
+                                  </td>
+                                  <td width="35%">
+                                      Highway Pirates
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Actor
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2008
+                                  </td>
+                                  <td width="35%">
+                                      Zombie Surfers
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2007
+                                  </td>
+                                  <td width="35%">
+                                      Adventures of Tim Manning
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                          
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2007
+                                  </td>
+                                  <td width="35%">
+                                      You, Me and a Horse
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Director
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                        </div><!--dataListTbl-->
+                        
+                        <div class="dataListTbl">
+                          <h4>TV</h4>
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2012
+                                  </td>
+                                  <td width="35%">
+                                      Alien Hangover
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2010
+                                  </td>
+                                  <td width="35%">
+                                      This Week In Horror
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Himself
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2010
+                                  </td>
+                                  <td width="35%">
+                                      Tomorrow, Today, Now
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer.Director
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2009
+                                  </td>
+                                  <td width="35%">
+                                      400 Blades
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Producer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+                          <div class="dataWrap">
+                              <table class="table table-condensed">
+                              <tr>
+                                  <td width="10%">
+                                      2005
+                                  </td>
+                                  <td width="35%">
+                                      Dirtbike Ninjas
+                                  </td>
+                                  <td width="10%">
+                                      <a href="#"><img src="/assets/IMDB.png" alt=""></a>
+                                  </td>
+                                  <td width="35%">
+                                      Writer.Director.Producer
+                                  </td>
+                                  <td class="vega" width="10%">
+                                      <a href="#" class="openEditCridit">(EDIT)</a>
+                                  </td>
+                              </tr>
+                              </table>
+                              <div class="adminEditCredit">
+                                  <h3>EDIT CREDIT</h3>
+                                  <form>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxCreditType">
+                                              <label for="e_credittype">Credit Type</label>
+                                              <select name="e_credittype">
+                                                  <option>FILM</option>
+                                                  <option>01</option>
+                                                  <option>02</option>
+                                                  <option>03</option>
+                                                  <option>04</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxYear">
+                                              <label for="year">Year</label>
+                                              <select name="e_year">
+                                                  <option>2012</option>
+                                                  <option>2013</option>
+                                                  <option>2014</option>
+                                                  <option>2015</option>
+                                                  <option>2016</option>
+                                              </select>
+                                          </div>
+                                          <div class="boxtitle">
+                                              <label for="Editi_title">TITLE</label>
+                                              <input type="text" name="Editi_title" id="Editi_title" placeholder="Rad Movie is Rad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow clearfix">
+                                          <div class="boxrole">
+                                              <label for="e_role">Role</label>
+                                              <input type="text" name="e_role" placeholder="Writer.Director">
+                                          </div>
+                                          <div class="boxIMDB">
+                                              <label for="e_linkimdb">Link to IMDB</label>
+                                              <input type="text" name="e_linkimdb" placeholder="http://imdb.com/radmovieisrad">
+                                          </div>
+                                      </div>
+                                      <div class="innerRow" style="text-align:right;">
+                                          <button type="submit" class="btn bold"><i class="icon-grid"></i> SAVE</button>
+                                      </div>
+                                  </form>
+                              </div>
+                          </div>
+                          <!--dataWrap-->
+
+                        </div><!--dataListTbl-->
+                      <div class="saveBox">
+                            <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+                      </div>
+                      
+          </div>
+          <!--#Crew_tab_con-->
+          <div class="tab-pane fade" id="Messages_tab_con">
+            <h2 style="text-align:center;">Messages Content Goes Here</h2>
+          </div>
+          <!--#Messages_tab_con-->
+          <div class="tab-pane fade" id="Updates_tab_con">
+            <form>
+              <div class="clearfix" style="margin-left:28px;">
+                <div class="control-group styleSelect">
+                  <label for="con_request">Connection Requests:</label>
+                  <select id="con_request" name="con_request">
+                    <option value="">Everyone</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                <div class="control-group styleSelect">
+                  <label for="messaging">Messaging:</label>
+                  <select id="messaging" name="messaging">
+                    <option value="">Everyone</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                <div class="control-group styleSelect">
+                  <label for="extr_search">External Search Engine:</label>
+                  <select id="extr_search" name="extr_search">
+                    <option value="">Public</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                  </select>
+                </div>
+                                <div class="control-group styleSelect">
+                <button class="btn bold">Manage</button>
+                </div>
+              </div>
+              <div class="saveBox">
+                <button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+              </div>
+            </form>
+          </div>
+          <!--#Updates_tab_con-->
+          <div class="tab-pane fade" id="Needs_tab_con">
+            <%= link_to "+ ADD NEED", user_cini_needs_path(@cini), :class => "btn" %>
+            <%= render :partial => "cini_public_needs/public_needs" %>
+          </div>
+          <!--#Needs_tab_con-->
+        </div>
+        <!--tab-content-->
+      </div>
+      <!--adminRightContent-->

@@ -1,0 +1,50 @@
+  <% if @role.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@role.errors.count, "error") %> prohibited this role from being saved:</h2>
+
+      <ul>
+      <% @role.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :character %>
+    <%= f.text_field :character %>
+  </div>
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+  <div class="field">
+    <%= f.label :height %>
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :hair_color %>
+    <%= f.text_field :hair_color %>
+  </div>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %>
+    <%= f.radio_button(:gender, "0", :checked => (@role.gender == false)? true : false) %> Male <br\>
+    <%= f.radio_button(:gender, "1", :checked => (@role.gender == true)? true : false) %> Female <br\>
+  </div>
+
+  <div class="field">
+  <%= f.fields_for :images do |img| %>
+    <%= img.label :image %>
+    <%= img.file_field :image %>
+    <%= img.hidden_field :image_cache %>
+    <%= image_tag(img.object.image_url) if img.object.image? %>
+  <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>

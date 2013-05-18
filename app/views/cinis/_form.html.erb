@@ -1,0 +1,39 @@
+
+
+  <% if @cini.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cini.errors.count, "error") %> prohibited this cini from being saved:</h2>
+      <ul>
+      <% @cini.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="actions">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div><br/>
+    <div class="actions">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div><br/>
+    <div class="actions">
+    <%= f.label :logline %>
+    <%= f.text_area :log_line, :rows => "2" %>
+  </div><br/>
+    <div class="actions">
+    <%= f.label :synopsis %>
+    <%= f.text_area :synopsis, :rows => "2" %>
+  </div><br/>
+
+  <div class="actions">
+    <%= fields_for @image do |u| %>
+      <%= u.label :image %><br />
+      <%= u.file_field :image %>
+    <%end%>
+  </div><br/>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>

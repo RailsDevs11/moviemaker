@@ -1,0 +1,15 @@
+<% @tag_credits = @credits.tagged_with(credit_tag) %>
+<% unless @tag_credits.blank? %>
+  <h4><%= credit_tag %><h4>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th width="10%">Year</th>
+        <th width="35%">Title</th>
+        <th width="10%"></th>
+        <th width="35%">Roll</th>
+      </tr>
+    </thead>
+    <%= render :partial => "user_public_credits/credit", :collection => @tag_credits %>
+  </table>
+<% end %>  

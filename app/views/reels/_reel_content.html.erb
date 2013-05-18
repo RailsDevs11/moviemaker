@@ -1,0 +1,28 @@
+<fieldset class="item">
+
+  <%= form.label :title %>
+  <%= form.object.errors[:title][0] %>
+  <%= form.text_field :title %>
+
+  <%= form.hidden_field :videoable_type, :value => "#{videoable_type}" %>
+  <%= form.hidden_field :videoable_id, :value => "#{videoable_id}" %>
+
+  <%= form.label :description %>
+  <%= form.object.errors[:description][0] %>
+  <%= form.text_field :description%>
+
+  <%= form.label :is_featured %>
+  <%= form.check_box :is_featured %>
+
+  <%= image_tag(form.object.video_url) unless form.object.video.blank? %>
+  <%= form.label :video %>
+  <%= form.file_field :video %> 
+  <%= form.hidden_field :video_cache %>
+  
+  <%= form.hidden_field :id %>
+  <%= form.hidden_field :_destroy %>
+
+  <% unless current_user.errors.blank? %>
+    <a href="#" class="remove" >Remove video</a>
+  <% end %>
+</fieldset>

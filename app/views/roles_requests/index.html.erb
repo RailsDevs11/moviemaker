@@ -1,0 +1,9 @@
+<h3>Role Requests: </h3>
+<% unless @requests.blank? %>
+  <h5><%= link_to "Delete All", update_status_role_path("all", :status => 'rejected'), :remote => true %></h5>
+<% end %>
+<div id="requests">
+<table>
+  <%= render :partial => "request", :collection => @requests %>
+</table>
+</div>

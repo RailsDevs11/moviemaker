@@ -1,0 +1,58 @@
+<table class="table table-condensed">
+<tr>
+  <td width="10%" id="credit_data_year_<%= credit_data.id%>" >
+      <%= credit_data.year %>
+  </td>
+  <td width="35%" id="credit_data_title_<%= credit_data.id%>">
+      <%= credit_data.title %>
+  </td>
+  <td width="10%">
+      <%#= credit_data.link %><a href="javascript:void(0);"><img src="/assets/IMDB.png" alt=""></a>
+  </td>
+  <td width="35%" id="credit_data_role_<%= credit_data.id%>">
+      <%= credit_data.role %>
+  </td>
+  <td class="vega" width="10%">
+      <a href="#" class="openEditCridit">(EDIT)</a>
+  </td>
+</tr>
+</table>
+
+<div class="adminEditCredit" id="adminEditCredit_div_<%= credit_data.id %>">
+  <h3>EDIT CREDIT</h3>
+  
+      <div class="innerRow clearfix">
+          <div class="boxCreditType">
+              <label for="e_credittype">Credit Type</label>
+              <%#= credit_form.select "credit_type", options_for_select(@credit_types, :selected=>@credit.credit_type_list) %>
+              <select name="e_credittype">
+                  <option>FILM</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+              </select>
+          </div>
+          <div class="boxYear">
+              <label for="year">Year</label>
+              <%= credit_form.select :year, Credit::YEARS, {}, {:class => "edit_credit_#{credit_data.id}", :newid => "credit_data_year_#{credit_data.id}"} %>
+          </div>
+          <div class="boxtitle">
+              <label for="Editi_title">TITLE</label>
+              <%= credit_form.text_field :title, :placeholder => "Rad Movie is Rad",:class=>"edit_credit_#{credit_data.id}", :newid=>"credit_data_title_#{credit_data.id}" %>
+          </div>
+      </div>
+      <div class="innerRow clearfix">
+          <div class="boxrole">
+              <label for="e_role">Role</label>
+              <%= credit_form.text_field :role, :placeholder => "Writer.Director" ,:class=>"edit_credit_#{credit_data.id}" , :newid=>"credit_data_role_#{credit_data.id}" %>
+          </div>
+          <div class="boxIMDB">
+              <label for="e_linkimdb">Link to IMDB</label>
+              <%= credit_form.text_field :link, :placeholder => "http://imdb.com/radmovieisrad" %>
+          </div>
+      </div>
+      <div class="innerRow" style="text-align:right;">
+        <%=link_to content_tag('i class="icon-grid"></i', 'SAVE'), 'javascript:void(0);', :class => "btn uppercase openEditCridit savelink",:id=>"save_btn_#{credit_data.id}" %>
+      </div>
+</div>

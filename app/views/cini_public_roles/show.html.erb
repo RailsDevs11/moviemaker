@@ -1,0 +1,30 @@
+Roles > <%= @role.character %>
+<table>
+  <tr>
+    <td><%= @role.character %></td>
+  </tr>
+  <tr>
+    <td>Gender: <%= @role.gender ? "Male" : "Female" %></td>
+  </tr>
+  <tr>
+    <td>Height: <%= @role.height %></td>
+  </tr>
+  <tr>
+    <td>Age: <%= @role.age %></td>
+  </tr>
+  <% @role.images.each do |image| %>
+    <% next if image.image.blank? %>
+    <tr>
+      <td><%= image_tag(image.image.url) %></td>
+    </tr>
+  <% end %>
+   <tr>
+    <% status = @role.role_pedding_status(current_user.id) %>
+    <% if status == "Apply" %>
+      <td><%= link_to "Apply", role_request_cini_cini_public_role_path(@cini.id, @role.id), :method => :post %></td>
+    <% else %>
+      <td>You have aleardy <%= status %> for this role.</td>
+    <% end %>
+  </tr>
+</table>
+

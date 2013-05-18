@@ -1,0 +1,177 @@
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true }) do |f| %>
+  <%= devise_error_messages! %>
+						<div class="detailRow1 clearfix margin15">
+                              <div class="profileAminUser uploadedImageBox">
+                                  <%= image_tag(current_user.user_upload_image, :id => "blah")%>
+                                  <a href="#">Profile Image Guidelines</a>
+                                   <a href="javascript:void(0);" class="btn uppercase fileinput-button_signup"><i class="icon-grid"></i>
+        <%= fields_for @image do |img| %>
+          <%= img.file_field :image %>
+          <%= img.hidden_field :image_cache %>
+        <% end %>  
+        &nbspUPLOAD</a>
+                              </div>
+
+     
+
+                              <div class="detailRight2 clearfix">
+                                  <h4>Details</h4>
+                                  <label for="title">First Name</label>
+                                  <%= f.text_field :first_name, :placeholder => "First Name" %>
+                                  <label for="title">Last Name</label>
+                                  <%= f.text_field :last_name, :placeholder => "Last Name" %>
+                                  <div class="locationSelectBox">
+                                      <label for="location_primary">Location (Primary)</label>
+                                      <select id="location_primary" name="location_primary">
+                                          <option value="Los Angeles">Los Angeles</option>
+                                          <option value="">One</option>
+                                          <option value="">Two</option>
+                                      </select>
+                                  </div>
+                                  <div class="locationSelectBox">
+                                      <label for="location_secondary">Location (Secondary)</label>
+                                      <select id="location_secondary" name="location_secondary">
+                                          <option value="Los Angeles">Los Angeles</option>
+                                          <option value="">One</option>
+                                          <option value="">Two</option>
+                                      </select>
+                                  </div>
+                                  <div class="chooseUpBox clearfix">
+                                      <div class="chooseSelect1">
+                                          <h4>I am a ( Choose up to 3 )</h4>
+                                          <div class="control-group styleSelect">
+                                              <label for="Primary">Primary</label>
+                                              <select name="Primary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                          <div class="control-group styleSelect">
+                                              <label for="Secondary">Secondary</label>
+                                              <select name="Secondary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                          <div class="control-group styleSelect">
+                                              <label for="Tertiary">Tertiary</label>
+                                              <select name="Tertiary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      <div class="chooseSelect2">
+                                          <h4>Unions ( Choose up to 3 )</h4>
+                                          <div class="control-group styleSelect">
+                                              <label for="Primary">Primary</label>
+                                              <select name="Primary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                          <div class="control-group styleSelect">
+                                              <label for="Secondary">Secondary</label>
+                                              <select name="Secondary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                          <div class="control-group styleSelect">
+                                              <label for="Tertiary">Tertiary</label>
+                                              <select name="Tertiary">
+                                                  <option value="">Choose One</option>
+                                                  <option value="">One</option>
+                                                  <option value="">Two</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div><!--detailRow1-->
+                        <div class="lineShade"></div>
+                        <div class="otherInfo1">
+                        	<div class="ageRow clearfix">
+                              <div>
+                              <label for="height">Height</label>
+                               <%= f.text_field :height, :placeholder => "5&rsquo; 10&rsquo;&rsquo;".html_safe %>
+                              </div>
+                              <div>
+                              <label for="age">Age</label>
+                               <%= f.text_field :age, :placeholder => "29" %>
+                              </div>
+                            </div>
+                            <div class="aboutMe">
+                            <label>About Me</label>
+                             <%= f.text_area :about %>
+                            </div>
+                        </div>
+                        <div class="socialLinks">
+                        	<h4>Social Links</h4>
+                            <div class="newLinkBox">
+                            	<h4>NEW LINK</h4>
+                                <div class="addInputRow clearfix">
+                                	<div class="networkBlock styleSelect">
+                                      <label for="network">network</label>
+                                      <select name="network">
+                                          <option value="">FACEBOOK</option>
+                                          <option value="">Twitter</option>
+                                          <option value="">Google</option>
+                                      </select>
+                                    </div>
+                                    <div class="linkInputBlock">
+                                    	<label>url</label>
+                                        <input type="url" name="url" pattern="">
+                                    </div>
+                                    <div class="addButtonBlock alignRight">
+                                    	<a href="#" class="btn uppercase"><i class="icon-grid"></i> ADD</a>
+                                    </div>
+                                </div><!--inputAddRow-->
+                            </div><!--newLinkBox-->
+                            
+                            <div class="addedLinks">
+                            	 <div class="dataWrap">
+                                  <table class="table table-condensed">
+                                    <tbody>
+                                    <tr>
+                                        <td width="15%">FaceBook</td>
+                                        <td width="60%">http://facebook.com/aimes.stameron</td>
+                                        <td class="vega" width="10%">
+                                            <a href="#" class="">(EDIT)</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                          		  </div>
+                                  <!--dataWrap-->
+                                  <div class="dataWrap">
+                                  <table class="table table-condensed">
+                                    <tbody>
+                                    <tr>
+                                        <td width="15%">FaceBook</td>
+                                        <td width="60%">http://facebook.com/aimes.stameron</td>
+                                        <td class="vega" width="10%">
+                                            <a href="#" class="">(EDIT)</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                          		  </div>
+                                  <!--dataWrap-->
+                            </div>
+                            <div class="connectedButton">
+                            	<a href="#"><img src="/assets/facebookConnect.png" alt=""></a>
+                                <a href="#"><img src="/assets/twitterConnect.png" alt=""></a>
+                                <a href="#"><img src="/assets/linkedInIcon.png" alt=""></a>
+                            </div>
+                            
+                        </div>
+                        <div class="saveBox">
+  						<button class="btn uppercase"><i class="icon-grid"></i> Save</button>
+						</div>
+<% end %>
